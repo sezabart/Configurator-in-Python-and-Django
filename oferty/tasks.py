@@ -1,4 +1,4 @@
-from celery import task
+from celery import shared_task as task
 from django.shortcuts import get_object_or_404
 from oferty.models import Oferta
 from django.template.loader import render_to_string

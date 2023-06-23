@@ -1,5 +1,7 @@
-from django.conf.urls import url
+#from django.conf.urls import url  #deprecated
+from django.urls import re_path as url
 from . import views
+app_name = 'oferty' #added to solve app/urls.py problem
 
 urlpatterns = [
     url(r'^tworz/$',

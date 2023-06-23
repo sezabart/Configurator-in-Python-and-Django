@@ -50,11 +50,21 @@ Message broker is **RabbitMQ** and distributed task queue is **Celery**.
 Otherwise: HTML5, CSS3, jQuery, PostgreSQL, SQLite
 
 ### Instalation
+Make sure the pyc magic numbers are fresh for your version of python using the steps in the following post:
+https://stackoverflow.com/questions/514371/whats-the-bad-magic-number-error
 
 Dependencies are installed using the command:
 
 ```python
 pip install -U -r requirements.txt
+```
+
+If you are using a venv make sure celery and crispy forms are installed as well for the user.
+
+```python
+pip install --user celery
+pip install --user django-crispy-forms
+pip install --user cripsy-bootstrap3
 ```
 
 To properly send an e-mail with a pdf file, complete the lines with the appropriate data in the settings.py file
@@ -91,7 +101,8 @@ Run applications in the console with the command:
 python manage.py runserver
 ```
 
-RabbitMQ required.
+RabbitMQ required. Use this helpful post for ubuntu:
+https://www.cherryservers.com/blog/how-to-install-and-start-using-rabbitmq-on-ubuntu-22-04
 
 After installation, launch RabbitMQ using the following command issued in the shell.
 
@@ -104,6 +115,9 @@ Go to the next shell and start the Celery worker thread using the following comm
 ```
 celery -A app worker -l info
 ```
+
+
+The host will default to 128.0.0.1:8000
 
 ### Summation
 

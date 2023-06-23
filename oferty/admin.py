@@ -1,15 +1,14 @@
 from django.contrib import admin
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _ #ugettext_lazy is deprecated
 from .models import Oferta
 from django.db import models
 from django.http import HttpResponse
-from django.core.urlresolvers import reverse
+from django.urls import reverse #urlresolvers is deprecated
 from django.utils.html import format_html_join
 from django.utils.safestring import mark_safe
 import csv
 import datetime
 from django.http import HttpResponse
-from django.core.urlresolvers import reverse
 
 def export_to_csv(modeladmin, request, queryset):
     opts = modeladmin.model._meta

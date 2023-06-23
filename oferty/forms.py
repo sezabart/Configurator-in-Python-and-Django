@@ -1,7 +1,8 @@
-from crispy_forms.bootstrap import PrependedText, Accordion, AccordionGroup, Tab, FieldWithButtons, StrictButton, \
+from django-crispyforms.bootstrap import PrependedText, Accordion, AccordionGroup, Tab, FieldWithButtons, StrictButton, \
     PrependedAppendedText, TabHolder, FormActions, InlineField
 from django import forms
-from django.utils.translation import ugettext_lazy as _, ugettext
+from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext #ugettext is deprecated
 from crispy_forms import layout, bootstrap
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, MultiField, Div, Field, Button
