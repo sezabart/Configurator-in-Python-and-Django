@@ -1,4 +1,4 @@
-from django-crispyforms.bootstrap import PrependedText, Accordion, AccordionGroup, Tab, FieldWithButtons, StrictButton, \
+from crispy_forms.bootstrap import PrependedText, Accordion, AccordionGroup, Tab, FieldWithButtons, StrictButton, \
     PrependedAppendedText, TabHolder, FormActions, InlineField
 from django import forms
 from django.utils.translation import gettext_lazy as _
